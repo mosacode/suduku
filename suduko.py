@@ -1,7 +1,7 @@
 from tkinter import *
 import tkinter.messagebox
 from tkinter import messagebox
-
+import tkinter.font as font
 
 root=Tk()
 
@@ -13,9 +13,13 @@ ent=[]
 
 for i in range(1,10):
     for j in range (1,10):
-        ent.append(Entry(root, width=3))
+        ent.append(Entry(root, width=4))
         ent[len(ent)-1].grid(row=i, column=j)
 
 
+buttonFont = font.Font(family='Helvetica', size=10, weight='bold')
+btn_submit = Button(root, text = 'Finish',font=buttonFont, fg = "red", bg = 'brown', width=30)
+btn_submit.grid(row = 10, column = 1, columnspan=9)
 
 root.mainloop()
+
